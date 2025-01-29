@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.Month;
 
 public class Main {
     public static void task(int n) {
@@ -6,6 +7,13 @@ public class Main {
             System.out.println("-----------------------");
         }
         System.out.println("Task " + n);
+    }
+
+    public static void date() {
+        int day = LocalDate.now().getDayOfMonth();
+        Month month1 = LocalDate.now().getMonth();
+        int year = LocalDate.now().getYear();
+        System.out.println("Дата: " + day + " " + month1 + " " + year);
     }
 
     public static boolean isLeap(int y) {
@@ -53,6 +61,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        System.out.println("Методы");
+        date();
         task(1);
         int year = 2000;
         boolean isLeap = isLeap(year);
