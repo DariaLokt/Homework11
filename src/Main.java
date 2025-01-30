@@ -24,14 +24,11 @@ public class Main {
 
     public static void determineAppVersion(int clientOS, int clientDeviceYear) {
         int currentYear = LocalDate.now().getYear();
-        if (clientOS == 1 && clientDeviceYear < currentYear)
-        {
+        if (clientOS == 1 && clientDeviceYear < currentYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (clientOS == 0 && clientDeviceYear < currentYear)
-        {
+        } else if (clientOS == 0 && clientDeviceYear < currentYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientOS == 0 && clientDeviceYear == currentYear)
-        {
+        } else if (clientOS == 0 && clientDeviceYear == currentYear) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clientOS == 1 && clientDeviceYear == currentYear) {
             System.out.println("Установите версию приложения для Android по ссылке");
